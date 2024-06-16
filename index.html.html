@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eid Mubarak</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Nobile"
+        />
+        <style type="text/css">
+            body {
+                height: 100%;
+                margin: 0;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background: linear-gradient(
+                    90deg,
+                    rgba(45, 109, 255, 1) 0%,
+                    rgba(48, 111, 255, 1) 39%,
+                    rgba(161, 206, 255, 1) 78%
+                );
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card {
+                position: relative;
+                width: 300px;
+                height: 425px;
+                border: 10px solid #004161;
+                margin: 60px auto 0 auto;
+                box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: #ffffff;
+                transition: margin-left 0.8s ease-in-out;
+            }
+
+            .card .text-container {
+                width: 80%;
+                height: 80%;
+                margin: auto;
+            }
+
+            .strikethrough {
+                text-decoration: line-through;
+            }
+
+            .card .text-container #head {
+                font-family: "Nobile", sans-serif;
+                font-size: 3vmin;
+                margin: 60px auto 60px auto;
+            }
+
+            .card p {
+                font-size: 2.5vmin;
+                line-height: 1.4;
+                font-family: "Nobile";
+                color: #331717;
+                font-style: italic;
+                text-align: center;
+                margin: 30px auto 0px auto;
+            }
+
+            .card .front {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                margin: -10px 0px 0px -10px;
+                border: 10px solid #004161;
+                backface-visibility: hidden;
+                background-color: #004161;
+                background-size: contain;
+                transform-style: preserve-3d;
+                transform-origin: 0% 50%;
+                transform: perspective(800px) rotateY(0deg);
+                transition: all 0.8s ease-in-out;
+            }
+
+            .card:hover .front {
+                transform: perspective(800px) rotateY(-170deg);
+                background-color: #41718d;
+            }
+
+            .card:hover .back {
+                transform: perspective(800px) rotateY(-170deg);
+                box-shadow: 7px 0px 5px 0px rgba(0, 0, 0, 0.3),
+                    inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+                background-color: #d2dcd2;
+            }
+
+            .card .back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 10px solid #004161;
+                margin: -10px 0px 0px -10px;
+                backface-visibility: visible;
+                filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+                transform-style: preserve-3d;
+                transform-origin: 0% 50%;
+                transform: perspective(800px) rotateY(0deg);
+                transition: all 0.8s ease-in-out;
+                background-color: #e6f0e6;
+                box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
+            }
+
+            .imgset {
+                position: relative;
+                z-index: 1;
+            }
+
+            .imgset img {
+                box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+            }
+
+            .stretched {
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+                overflow: hidden;
+                height: 100%;
+            }
+            .regards {
+                font-size: 4vmin;
+                font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+                    sans-serif;
+                margin-bottom: 5px;
+                margin-top: 5px;
+            }
+
+            @media screen and (max-width: 768px) {
+                .card {
+                    width: 80%;
+                    height: 425px;
+                    margin: 20px auto;
+                    border-width: 5px;
+                }
+
+                .card.focused {
+                    margin-left: 50%;
+                    height: auto;
+                }
+
+                .card .text-container {
+                    width: 90%;
+                    height: auto;
+                }
+
+                .card p {
+                    font-size: 5vmin;
+                    line-height: 1.4;
+                    font-family: "Nobile";
+                    color: #331717;
+                    font-style: italic;
+                    text-align: center;
+                    margin: 30px auto 0px auto;
+                }
+
+                .card .text-container #head {
+                    font-family: "Nobile", sans-serif;
+                    font-size: 8vmin;
+                    margin: 60px auto 60px auto;
+                }
+                .imgset {
+                    margin-bottom: -150px;
+                }
+
+                .imgset img {
+                    width: 100%;
+                }
+
+                .regards {
+                    font-size: 5vmin;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card" tabindex="0">
+            <div class="back stretched">
+                <div class="imgset">
+                    <img src="eid-bakra.jpg" width="100%" height="100%" />
+                </div>
+            </div>
+            <div class="front stretched">
+                <div class="imgset">
+                    <img
+                        src="EidUlAdhaMubarak.jpg"
+                        width="100%"
+                        class="stretched"
+                    />
+                </div>
+            </div>
+            <div class="text-container">
+                <h2
+                    id="head"
+                    style="
+                        font-weight: 800;
+                        margin-bottom: 20px;
+                        margin-top: 25px;
+                        text-align: center;
+                    "
+                >
+                    Eid-ul-Azha Mubarak
+                </h2>
+                <p>
+                    Eid ul Azha Mubarak! May the spirit of sacrifice and
+                    devotion fill your heart with love and bring you closer to
+                    your loved ones.
+                </p>
+                <p style="margin-top: 20px; margin-bottom: 10px">
+                    Hope your day goes great!
+                </p>
+                <h6 class="regards" style="margin-top: 10px">Regards,</h6>
+                <h6 class="regards">Uzair Abdullah</h6>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const card = document.querySelector(".card");
+
+                card.addEventListener("focus", function () {
+                    if (window.innerWidth <= 768) {
+                        card.classList.add("focused");
+                    }
+                });
+
+                card.addEventListener("blur", function () {
+                    card.classList.remove("focused");
+                });
+            });
+        </script>
+    </body>
+</html>
